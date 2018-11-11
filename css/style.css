@@ -1,0 +1,131 @@
+body {
+    background-color: transparent;
+}
+
+.Startbox{
+    position:absolute;
+    bottom:10px;
+    vertical-align: bottom;
+    opacity: 1;
+    background-color: ghostwhite;
+    display: block;
+    width:30%;
+    padding: 5px;
+    border: solid;
+    border-color:black;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.Startbox img{
+    width:25%;
+}
+
+.Startbox p{
+    bottom:10px;
+}
+.Syncbox{
+    border: solid;
+    border-color:black;
+    background-color: ghostwhite;
+    opacity:1;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width: 550px;
+}
+.Syncbox h1,h2{
+    text-align: center;
+}
+
+.okbox{
+    border: solid;
+    border-color:black;
+    background-color: ghostwhite;
+    opacity:1;
+    position: relative;
+    left:25%;
+    width: 550px;
+    top:300px;
+}
+
+.okbox img{
+    width:10%;
+    left:250px;
+    overflow: auto;
+}
+
+.okbox p{
+    margin-left: 40%;
+}
+#CatalogInfo{
+    left: 5%;
+}
+
+#CatalogList{
+    background-color: ghostwhite;
+}
+.flex-container img{
+    width: 10%;
+    height:40%;
+}
+.flex-container {
+    left:15%;
+    background-color: ghostwhite;
+    border: solid;
+    border-color:black;
+    margin-right:15%;
+    padding-left:5%;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    position:absolute;
+    bottom:10px;
+    vertical-align: bottom;
+}
+
+.Exitbox {
+    background-color: ghostwhite;
+    border: solid;
+    border-color:black;
+    display: flex;
+    flex-direction:row;
+    position:absolute;
+    left:90%;
+    bottom:10px;
+    vertical-align: bottom;
+}
+
+.Exitbox p{
+    margin:5%;
+}
+.blocRight{
+    margin-right:3%;
+    width:400px;
+    border: solid;
+    border-color:black;
+}
+
+.fstbox:-moz-full-screen{
+    display:block;
+    position:absolute;
+    bottom:10px;
+    vertical-align: bottom;
+    opacity: 1;
+    background-color: ghostwhite;
+    width:30px;
+    padding: 5px;
+    border: solid;
+    border-color:black;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+
+
+

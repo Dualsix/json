@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//HbbTV//1.1.1//EN" "http://www.hbbtv.org/dtd/HbbTV-1.1.1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+    <!--<title>HbbTV Application Template </title>-->
+
+    <link href="css/style.css" rel="stylesheet" type="text/css"></link>
+
+    <meta http-equiv="content-type" content="application/vnd.hbbtv.xhtml+xml" charset="UTF-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+
+    <script type="text/javascript" src="./js/hbbtvlib.js"></script>
+    <script type="text/javascript" src="./js/keycodes.js"></script>
+    <script type="text/javascript" src="./js/readJson.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        window.onload = function(){
+            hbbtvlib_initialize();
+
+            document.addEventListener("keydown", function(e) {
+                document.getElementById("divGraphic").innerHTML = e.keyCode;
+            },false);
+        };
+        //]]>
+    </script>
+</head>
+
+<body>
+    <!--
+    The main page should have application manager, and should call show() at onload();
+    -->
+    <object id="oipfAppMan" type="application/oipfApplicationManager"></object>
+    <!-- the logical HbbTV Application graphic plane is 1280px horizontally by 720px vertically
+    So the every content should be draw in 1280 * 720 -->
+    <div style="left: 0px; top: 0px; width: 1280px; height: 720px;  position:absolute; border:1px solid black;  z-index:-1;"></div>
+
+    <!-- Graphic safe area(Recommend), 1024 * 648 -->
+    <div id="divGraphic" style="left: 128px; top: 36px; width: 1024px; height: 648px; position:absolute; z-index:1;"></div>
+
+    <!--Creamos el panel inicial con boton rojo-->
+    <div id="startBox" class="Startbox">
+        <p>Press <img id="redButton" src="img/redbutton.gif" /> to continue</p>
+    </div>
+
+    <!-- Creamos el botón de salida-->
+    <div id="exitBox" class="Exitbox">
+        <p>Press "0" to Exit</p>
+    </div>
+
+    <!-- Creamos los paneles de la segunda página-->
+    <div id="Sync" class="Syncbox">
+        <h2>Sync Number</h2>
+        <h1 id="syncNum">1234</h1>
+    </div>
+    <div id="OkBox" class="okbox">
+        <p>Press <img id="okButton" src="img/kisspng-computer-icons-desktop-wallpaper-ok-button-clip-ar-black-word-ok-icon-5ab061dc3bba43.4522010315215088282447.png" /> to continue</p>
+    </div>
+
+    <!-- Creamos los paneles de la tercera página-->
+    <!--Creamos la lista con la seleccion de videos VOD-->
+    <div id="CatalogList">
+        <div id="list" style="left: 80px; top: 40px; width: 1500px; height: 700px; position:absolute; z-index:1;">
+
+            <div id="blocLeft" style="background: rgba(255,255,255,1.0); width:700px; height; 700px; top:150px; left:150px; float:left;">
+                <ul id ="videoList"style="list-style-type: none;">
+                    <li>
+                        <div style="float:left; border:2px solid black; background: rgba(255,255,255,1.0)"><img align="top" height="90px" width="auto" id="imagen1" src="" /></div>
+                        <div id="Video1" style="padding-left: 1em; border: 2px solid black; float:left; width:75%; height:auto;">
+                            <div id="data" style="float: left;">
+                                <p id="album1"></p>
+                                <p id="artist1"></p>
+                            </div>
+                            <div id="view1" style="text-align:right; float=auto; padding-right: 3em;"><p>15</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="float:left; border:2px solid black; background: rgba(255,255,255,1.0)"><img align="top" height="90px" width="auto" id="imagen2" src="" /></div>
+                        <div id="Video2" style="padding-left: 1em; border: 2px solid black; float:left; width:75%; height:auto;">
+                            <div id="data" style="float: left;">
+                                <p id="album2"></p>
+                                <p id="artist2"></p>
+                            </div>
+                            <div id="view2" style="text-align:right; float=auto; padding-right: 3em;"><p>20</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="float:left; border:2px solid black; background: rgba(255,255,255,1.0)">
+                            <img align="top" height="90px" width="auto" id="imagen3" src="" />
+                        </div>
+                        <div id="Video3" style="padding-left: 1em; border: 2px solid black; float:left; width:75%; height:auto;">
+                            <div id="data" style="float: left;">
+                                <p id="album3"></p>
+                                <p id="artist3"></p>
+                            </div>
+                            <div id="view3" style="text-align:right; float=auto; padding-right: 3em;">
+                                <p>30</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="float:left; border:2px solid black; background: rgba(255,255,255,1.0)"><img align="top" height="90px" width="auto" id="imagen4" src="" /></div>
+                        <div id="Video4" style="padding-left: 1em; border: 2px solid black; float:left; width:75%; height:auto;">
+                            <div id="data" style="float: left;">
+                                <p id="album4"></p>
+                                <p id="artist4"></p>
+                            </div>
+                            <div id="view4" style="text-align:right; float=auto; padding-right: 3em;"><p>10</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="float:left; border:2px solid black; background: rgba(255,255,255,1.0)"><img align="top" height="90px" width="auto" id="imagen5" src="" /></div>
+                        <div id="Video5" style="padding-left: 1em; border: 2px solid black; float:left; width:75%; height:auto;">
+                            <div id="data" style="float: left;">
+                                <p id="album5"></p>
+                                <p id="artist5"></p>
+                            </div>
+                            <div id="view5" style="text-align:right; float=auto; padding-right: 3em;"><p>18</p></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!--esto es la informacion y la reproduccion de los videos-->
+    <div id="blocRight" class="blocRight" style="background: rgba(255,255,255,1.0); width:400px; height; 500px; top:100px; left:650px; float:right;">
+        <div id="CatalogInfo" style="float: left; margin-left:5px;position:relative;" >
+            <!--reproducimos el video en pequeño-->
+            <div style="margin-top:15px; margin-right:15px; padding-bottom:250px;"  class="live">
+                <object style="position:absolute;" id="videoPlayer"></object>
+            </div>
+
+            <!--mostramos los usuarios conectados-->
+            <h3>CONNECTED USERS</h3>
+            <div id="users">
+                <h4>User1</h4>
+                <h4>User2</h4>
+                <h4>User3</h4>
+            </div>
+
+            <!--mostramos la información de cada video-->
+            <h3>ALBUM INFO</h3>
+            <div id="info">
+                <h4>info1</h4>
+                <h4>info2</h4>
+                <h4>info3</h4>
+            </div>
+        </div>
+
+        <!--mostramos los botones disponibles en la última ventana-->
+        <div id="navbar" class="flex-container">
+            <p id="play"><img id="playButton" src="img/red-button.png" /> Play video</p>
+            <p id="pause"><img id="pauseButton" src="img/green-button.png" /> Pause video</p>
+            <p id="stop"><img id="stopButton" src="img/yellow-button.png" /> Stop video</p>
+            <p id="full"><img id="Fullscreen" src="img/blue-button.png" /> Fullscreen</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
