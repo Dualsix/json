@@ -106,13 +106,14 @@ function pressEnter (){
     };
     document.addEventListener("keydown",fullscreenButton);
     loadAllJSON();
-    images();
-    loadAutor();
-    loadVisitas();
-    //leerUsers();
+    
     var videos = JSON.parse(localStorage.getItem("videoListStorage"));
-    loadtitulo();
-    descripcion(j);
+    images(videos);
+    loadAutor(videos);
+    loadVisitas(videos);
+    //leerUsers(videos);
+    //loadtitulo(videos);
+    //descripcion(j);
  
 
     //activa el scroll abajo
@@ -149,9 +150,9 @@ function pressEnter (){
     document.addEventListener("keydown", function (e) {
         if (e.keyCode == VK_ENTER) {
             document.getElementById("videoPlayer").innerHTML = "";
-            document.getElementById("videoPlayer").type = "video/mp4";
+            document.getElementById("videoPlayer").type = "video/mpeg4";
             document.getElementById("videoPlayer").data = videos.datos[j-1].Url;
-            document.getElementById("videoPlayer").play(1);
+            document.getElementById("videoPlayer").play();
             document.getElementById("view" + j).innerHTMLvideos.datos[j - 1].Visitas += 1;
             //videos.datos[j].Visitas++;
             descripcion(j);
