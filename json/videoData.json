@@ -5,8 +5,8 @@
       "Name": "How to Make EAT ME CAKES & DRINK ME POTION, Alice in Wonderland Feast of Fiction",
       "Author": "Jimmy",
       "List": "Season2",
-      "Url": "/videos/aiw.mp4",
-      "ImgUrl": "/img/aiw.jpg",
+      "Url": "https://github.com/Dualsix/json/raw/master/videos/aiw.mp4",
+      "ImgUrl": "https://github.com/Dualsix/json/raw/master/img/aiw.JPG",
       "Visitas": "10",
       "Titulo": "How to Make EAT ME CAKES & DRINK ME POTION, Alice in Wonderland Feast of Fiction"
     },
@@ -15,8 +15,8 @@
       "Name": "How to Make RATATOUILLE! Disney Pixar",
       "Author": "Feast of Fiction",
       "List": "Season2",
-      "Url": "/videos/mp4.3gpp",
-      "ImgUrl": "/img/rata.jpg",
+      "Url": "https://github.com/Dualsix/json/raw/master/videos/rata.mp4",
+      "ImgUrl": "https://github.com/Dualsix/json/raw/master/img/rata.JPG",
       "Visitas": "10",
       "Titulo": "How to Make RATATOUILLE Disney Pixar"
     },
@@ -25,8 +25,8 @@
       "Name": "Scream Cheese (cake) from Hotel Transylvania! HAPPY HALLOWEEN",
       "Author": "Feast of Fiction",
       "List": "Season6",
-      "Url": "/videos/hotel.mp4",
-      "ImgUrl": "/img/hotel.jpg",
+      "Url": "https://github.com/Dualsix/json/raw/master/videos/hotel.mp4",
+      "ImgUrl": "https://github.com/Dualsix/json/raw/master/img/hotel.JPG",
       "Visitas": "10",
       "Titulo": "Scream Cheese cake from Hotel Transylvania HAPPY HALLOWEEN"
     },
@@ -35,8 +35,8 @@
       "Name": "NARUTO ICHIRAKU RAMEN",
       "Author": "Feast of Fiction",
       "List": "Jimmy",
-      "Url": "/videos/ramen.mp4",
-      "ImgUrl": "/img/ramen.jpg",
+      "Url": "https://github.com/Dualsix/json/raw/master/videos/ramen.mp4",
+      "ImgUrl": "https://github.com/Dualsix/json/raw/master/img/ramen.JPG",
       "Visitas": "10",
       "Titulo": "NARUTO ICHIRAKU RAMEN"
     },
@@ -45,8 +45,8 @@
       "Name": "How To Make the Chocolate Covered Checkerboard Cake from Food Wars! Shokugeki No Soma",
       "Author": "Feast of Fiction",
       "List": "Season5",
-      "Url": "/videos/choco.mp4",
-      "ImgUrl": "/img/choco.jpg",
+      "Url": "https://github.com/Dualsix/json/raw/master/videos/choco.mp4",
+      "ImgUrl": "https://github.com/Dualsix/json/raw/master/img/choco.JPG",
       "Visitas": "10",
       "Titulo": "How To Make the Chocolate Covered Checkerboard Cake from Food Wars Shokugeki No Soma"
     }
