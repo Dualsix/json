@@ -31,7 +31,7 @@ function images(videos) {
    
     console.log(videos.datos.length);
     for (i = 1; i <= videos.datos.length; i++) {
-        //https://github.com/Dualsix/json/raw/master/img/
+        //"https://github.com/Dualsix/json/raw/master/img/" + videos.datos[i-1].ImgUrl;
         document.getElementById("imagen" + i).src = videos.datos[i-1].ImgUrl;
         document.getElementById("imagen" + i).style.height = "90px";
         document.getElementById("imagen" + i).style.width = "90px";
