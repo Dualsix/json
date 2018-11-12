@@ -6,7 +6,8 @@
 var fullscreen = false;
 var pause = false;
 var j = 1;
-
+var uno = 0;
+var dos = 0;
 
 function hbbtvlib_initialize(){
 	//should be called show() function, if not the application will not be shown;
@@ -29,7 +30,9 @@ function hbbtvlib_initialize(){
 
 	var startButton = function(e) {
         e.preventDefault();
-        if (e.keyCode == VK_RED) pressStart();
+	if(uno == 0){
+        	if (e.keyCode == VK_RED) pressStart();
+	}
     };
     document.addEventListener("keydown",startButton);
 
@@ -71,20 +74,24 @@ function blue() {
 
 // al apretar el botón rojo en la primera pantalla, se muestra el contenido de la siguiente y se oculta el bloque de la primera pantalla
 function pressStart (){
+	uno = 1;
     $('#startBox').hide();
     $('#Sync').show();
     $('#OkBox').show();
     $('#syncNum').text(generateRandom());
-    var enterButton = function(e) {
-        e.preventDefault();
-        if (e.keyCode == VK_ENTER) pressEnter();
-    };
+    if(dos == 0){
+  	  var enterButton = function(e) {
+      	  e.preventDefault();
+     	   if (e.keyCode == VK_ENTER) pressEnter();
+    	};
+    }
     document.addEventListener("keydown", enterButton);
 }
 
 
 //Escondemos lo relativo a la segunda ventana y mostramos lo referente al catalogo
 function pressEnter (){
+	dos = 1;
     $('#Sync').hide();
     $('#OkBox').hide();
     $('#videoPlayer').show();
