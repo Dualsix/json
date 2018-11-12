@@ -4,6 +4,7 @@
  *	<object id="oipfAppMan" type="application/oipfApplicationManager"></object>
  */
 var fullscreen = false;
+var pause = false;
 var j = 1;
 
 
@@ -113,7 +114,7 @@ function pressEnter (){
     loadVisitas(videos);
     //leerUsers(videos);
     //loadtitulo(videos);
-    //descripcion(j);
+    descripcion(videos,j);
  
 
     //activa el scroll abajo
@@ -146,16 +147,45 @@ function pressEnter (){
     }, false);
 
 
-    //visualitza el video que es vol veure a la pantalla lateral
+    //ver en la pantalla lateral
     document.addEventListener("keydown", function (e) {
         if (e.keyCode == VK_ENTER) {
             document.getElementById("videoPlayer").innerHTML = "";
             document.getElementById("videoPlayer").type = "video/mpeg4";
-            document.getElementById("videoPlayer").data = videos.datos[j-1].Url;
+            document.getElementById("videoPlayer").data = "https://github.com/Dualsix/json/raw/master/videos/" + videos.datos[j-1].Url;
             document.getElementById("videoPlayer").play();
-            document.getElementById("view" + j).innerHTMLvideos.datos[j - 1].Visitas += 1;
+            document.getElementById("view" + j).innerHTML = parseInt(document.getElementById("view" + j).innerHTML) + 1;
             //videos.datos[j].Visitas++;
-            descripcion(j);
+            descripcion(videos,j);
+        };
+        e.preventDefault();
+    }, false);
+
+    // play del video 
+    document.addEventListener("keydown", function (e) {
+        if (e.keyCode == VK_RED && pause == true) {
+            pause = false;
+            document.getElementById("videoPlayer").childNodes[0].play();
+        };
+        e.preventDefault();
+    }, false);
+
+    //pausa el video
+    document.addEventListener("keydown", function (e) {
+        if (e.keyCode == VK_GREEN ) {
+            pause = true;
+            document.getElementById("videoPlayer").childNodes[0].pause();
+
+        };
+        e.preventDefault();
+    }, false);
+
+    //para el video 
+    document.addEventListener("keydown", function (e) {
+        if (e.keyCode == VK_YELLOW) {
+
+            document.getElementById("videoPlayer").stop();
+
         };
         e.preventDefault();
     }, false);
